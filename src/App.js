@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Red from "./Components/Red"
+import Pink from "./Components/Pink"
+import Purple from "./Components/Purple"
+import Indigo from "./Components/Indigo"
+import Blue from "./Components/Blue"
+import Cyan from "./Components/Cyan"
+import Teal from "./Components/Teal"
+import Green from "./Components/Green"
+import Lime from "./Components/Lime"
+import Yellow from "./Components/Yellow"
+import Amber from "./Components/Amber"
+import Orange from "./Components/Orange"
+import { Toaster } from 'react-hot-toast';
+import "./Style/style.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Toaster position='top-right'/>
+      <Navbar/>
+        <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route path="/red" element={<Red/>} />
+            <Route path="/pink" element={<Pink/>} />
+            <Route path="/purple" element={<Purple/>} />
+            <Route path="/indigo" element={<Indigo/>} />
+            <Route path="/blue" element={<Blue/>} />
+            <Route path="/cyan" element={<Cyan/>} />
+            <Route path="/teal" element={<Teal/>} />
+            <Route path="/green" element={<Green/>} />
+            <Route path="/lime" element={<Lime/>} />
+            <Route path="/yellow" element={<Yellow/>} />
+            <Route path="/amber" element={<Amber/>} />
+            <Route path="/orange" element={<Orange/>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

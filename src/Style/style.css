@@ -1,0 +1,39 @@
+@media only screen and (max-width:900px) {
+    .child{
+        height: 120px;
+        width: 120px;
+        font-size: 25px;
+    }
+    .main{
+        padding: 5px;
+    }
+    .curve{
+        margin: 0;
+        padding: 10px;
+        grid-template-columns: auto auto auto auto;
+    }
+    .set{
+        height: 120px;
+        width: 120px;
+        font-size: 20px;
+
+    }
+}
+@media only screen and (max-width:550px) {
+    .main{
+        grid-template-columns: auto auto auto;
+    }
+    .child{
+        height: 100px;
+        width: 100px;
+        font-size: 20px;
+    }
+    .curve{
+        grid-template-columns: auto auto auto;
+        padding: 4px;
+    }
+    .set{
+        height: 98px;
+        width: 98px;
+    }
+}
